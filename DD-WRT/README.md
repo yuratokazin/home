@@ -14,7 +14,7 @@
 Хотите объединить **две конкретные точки** в одну сеть или просто ищете способ **безопасного доступа** к домашним файлам извне?
 
 
-
+Ссылки:
 
 
 [View topic - ipip, ip-gre tunnel - DD-WRT](https://forum.dd-wrt.com/phpBB2/viewtopic.php?t=69774&sid=6f6e7d81836a7e60b280b8de9ea5fccd)
@@ -69,6 +69,7 @@ MikroTik
 Similarly, in networking, tunnels are a method for transporting data across a network using protocols that are not supported by th...
 
 Cloudflare
+
 [IP Tunnels - HPE Aruba Networking](https://arubanetworking.hpe.com/techdocs/AOS-CX/10.10/HTML/ip_services_83xx-10000/Content/Chp_IP_tun/ip-tun-10.htm#:~:text=An%20IP%20tunnel%20provides%20a,networks%20that%20the%20tunnel%20spans.)
 An IP tunnel provides a virtual link between endpoints on two different networks enabling data to be exchanged as if the endpoints...
 
