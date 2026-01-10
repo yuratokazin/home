@@ -1,4 +1,4 @@
-## DD-WRT для чего там Ethernet and IP Tunneling
+## DD-WRT для чего нужен Ethernet and IP Tunneling
 
 Функции 
 
