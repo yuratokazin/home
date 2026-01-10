@@ -1,5 +1,9 @@
 ## DD-WRT для чего нужен Ethernet and IP Tunneling
 
+http://192.168.1.1/eop-tunnel.asp
+
+**Setup** >>> **Tunnels**
+
 Функции 
 
 **Ethernet and IP Tunneling** в DD-WRT предназначены для создания виртуальных каналов связи между двумя удаленными точками через интернет. 
