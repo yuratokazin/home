@@ -33,7 +33,7 @@ sudo wget -O /usr/share/keyrings/matrix-org-archive-keyring.gpg https://packages
 echo "deb [signed-by=/usr/share/keyrings/matrix-org-archive-keyring.gpg] https://packages.matrix.org/debian/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/matrix-org.list
 ```
 
-1. Обновите список пакетов и установите Synapse:
+2. Обновите список пакетов и установите Synapse:
 
 ```
 bash
@@ -100,7 +100,7 @@ bash
 sudo apt install nginx certbot python3-certbot-nginx
 ```
 
-1. Настройте обратный прокси в NGINX. Пример конфигурации:
+2. Настройте обратный прокси в NGINX. Пример конфигурации:
 
 ```
 nginx
@@ -149,7 +149,7 @@ sudo mkdir -p /var/www/element
 cd /var/www/element
 ```
 
-1. Скачайте последнюю версию Element с GitHub:
+2. Скачайте последнюю версию Element с GitHub:
 
 ```
 bash
@@ -157,7 +157,7 @@ latest="$(curl -s https://api.github.com/repos/vector-im/element-web/releases/la
 sudo wget https://github.com/vector-im/element-web/releases/download/${latest}/element-${latest}.tar.gz
 ```
 
-1. Распакуйте архив и создайте символическую ссылку:
+3. Распакуйте архив и создайте символическую ссылку:
 
 ```
 bash
@@ -165,7 +165,7 @@ sudo tar xf element-${latest}.tar.gz
 sudo ln -s element-${latest} current
 ```
 
-1. Настройте конфигурацию Element. Скопируйте `config.sample.json` в `config.json` и отредактируйте его:
+4. Настройте конфигурацию Element. Скопируйте `config.sample.json` в `config.json` и отредактируйте его:
 
 ```
 bash
@@ -193,7 +193,7 @@ bash
 git clone https://github.com/Awesome-Technologies/synapse-admin.git
 ```
 
-1. Соберите проект (если требуется):
+2. Соберите проект (если требуется):
 
 ```
 bash
@@ -201,7 +201,7 @@ npm install
 npm run build
 ```
 
-1. Настройте NGINX для доступа к админ-панели. Добавьте в конфигурацию NGINX блок:
+3. Настройте NGINX для доступа к админ-панели. Добавьте в конфигурацию NGINX блок:
 
 ```
 nginx
@@ -211,7 +211,7 @@ location /admin {
 }
 ```
 
-1. Запустите Synapse Admin (например, через Docker или вручную).
+4. Запустите Synapse Admin (например, через Docker или вручную).
 
 ## Создание первого администратора
 
