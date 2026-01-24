@@ -52,14 +52,14 @@ bash
 sudo apt install postgresql
 ```
 
-1. Войдите в PostgreSQL как пользователь `postgres`:
+2. Войдите в PostgreSQL как пользователь `postgres`:
 
 ```
 bash
 sudo -su postgres
 ```
 
-1. Создайте пользователя и базу данных для Synapse:
+3. Создайте пользователя и базу данных для Synapse:
 
 ```
 sql
@@ -67,7 +67,7 @@ createuser --pwprompt synapse
 createdb --encoding=UTF8 --locale=C --template=template0 --owner=synapse synapse
 ```
 
-1. Вернитесь к обычному пользователю:
+4. Вернитесь к обычному пользователю:
 
 ```
 bash
