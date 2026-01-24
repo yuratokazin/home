@@ -71,8 +71,7 @@ exit
 
 В файле `/etc/matrix-synapse/homeserver.yaml` или в отдельном файле в директории `conf.d` укажите параметры подключения к PostgreSQL:
 
-```
-yaml
+```yaml
 database:
   name: psycopg2
   args:
@@ -88,15 +87,13 @@ database:
 
 1. Установите NGINX и Certbot:
 
-```
-bash
+```bash
 sudo apt install nginx certbot python3-certbot-nginx
 ```
 
 2. Настройте обратный прокси в NGINX. Пример конфигурации:
 
-```
-nginx
+```nginx
 server {
     listen 80;
     server_name matrix.example.com;
@@ -127,8 +124,7 @@ server {
 
 3. Получите SSL-сертификат с помощью Certbot:
 
-```
-bash
+```bash
 sudo certbot --nginx -d matrix.example.com
 ```
 
@@ -136,32 +132,28 @@ sudo certbot --nginx -d matrix.example.com
 
 1. Создайте директорию для Element:
 
-```
-bash
+```bash
 sudo mkdir -p /var/www/element
 cd /var/www/element
 ```
 
 2. Скачайте последнюю версию Element с GitHub:
 
-```
-bash
+```bash
 latest="$(curl -s https://api.github.com/repos/vector-im/element-web/releases/latest | jq -r .tag_name)"
 sudo wget https://github.com/vector-im/element-web/releases/download/${latest}/element-${latest}.tar.gz
 ```
 
 3. Распакуйте архив и создайте символическую ссылку:
 
-```
-bash
+```bash
 sudo tar xf element-${latest}.tar.gz
 sudo ln -s element-${latest} current
 ```
 
 4. Настройте конфигурацию Element. Скопируйте `config.sample.json` в `config.json` и отредактируйте его:
 
-```
-bash
+```bash
 cd current
 sudo cp config.sample.json config.json
 sudo nano config.json
@@ -169,8 +161,7 @@ sudo nano config.json
 
 Укажите ваш домен в полях `base_url` и `server_name`:
 
-```
-json
+```json
 "m.homeserver": {
   "base_url": "https://matrix.example.com",
   "server_name": "matrix.example.com"
@@ -181,23 +172,20 @@ json
 
 1. Клонируйте репозиторий Synapse Admin:
 
-```
-bash
+```bash
 git clone https://github.com/Awesome-Technologies/synapse-admin.git
 ```
 
 2. Соберите проект (если требуется):
 
-```
-bash
+```bash
 npm install
 npm run build
 ```
 
 3. Настройте NGINX для доступа к админ-панели. Добавьте в конфигурацию NGINX блок:
 
-```
-nginx
+```nginx
 location /admin {
     proxy_pass http://localhost:8080;
     proxy_set_header X-Forwarded-For $remote_addr;
@@ -210,8 +198,7 @@ location /admin {
 
 Создайте первого пользователя с правами администратора:
 
-```
-bash
+```bash
 sudo register_new_matrix_user -c /etc/matrix-synapse/homeserver.yaml http://127.0.0.1:8008 -u ваш-логин -p ваш-пароль --admin
 ```
 
