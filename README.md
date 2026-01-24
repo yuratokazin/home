@@ -1,5 +1,5 @@
 # home
-
+ 
 ## Установка и настройка сервера Matrix Synapse
 
 Установка и настройка сервера Matrix Synapse с PostgreSQL, Admin UI (Synapse  Admin) и Element Web на Debian требует нескольких этапов. Ниже приведена пошаговая инструкция.
