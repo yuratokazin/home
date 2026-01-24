@@ -15,8 +15,7 @@
 
 **Настройка фаервола:**
 
-```
-bash
+```bash
 sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 8448
