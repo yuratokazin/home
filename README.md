@@ -26,16 +26,14 @@ sudo ufw status
 
 1. Добавьте репозиторий Matrix.org:
 
-```
-bash
+```bash
 sudo wget -O /usr/share/keyrings/matrix-org-archive-keyring.gpg https://packages.matrix.org/debian/matrix-org-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/matrix-org-archive-keyring.gpg] https://packages.matrix.org/debian/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/matrix-org.list
 ```
 
 2. Обновите список пакетов и установите Synapse:
 
-```
-bash
+```bash
 sudo apt update
 sudo apt install matrix-synapse-py3
 ```
@@ -46,30 +44,26 @@ sudo apt install matrix-synapse-py3
 
 1. Установите PostgreSQL:
 
-```
-bash
+```bash
 sudo apt install postgresql
 ```
 
 2. Войдите в PostgreSQL как пользователь `postgres`:
 
-```
-bash
+```bash
 sudo -su postgres
 ```
 
 3. Создайте пользователя и базу данных для Synapse:
 
-```
-sql
+```sql
 createuser --pwprompt synapse
 createdb --encoding=UTF8 --locale=C --template=template0 --owner=synapse synapse
 ```
 
 4. Вернитесь к обычному пользователю:
 
-```
-bash
+```bash
 exit
 ```
 
