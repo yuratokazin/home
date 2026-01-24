@@ -220,3 +220,16 @@ sudo register_new_matrix_user -c /etc/matrix-synapse/homeserver.yaml http://127.
 
 
 
+[Свой узел связи на базе Matrix Synapse, Coturn и Element](https://habr.com/ru/companies/selectel/articles/943150/)
+
+[Установка и настройка сервера Matrix Synapse + PostgreSQL + Admin UI + Element WEB](https://habr.com/ru/articles/739606/)
+
+[Скрипт для быстрой установки Matrix Synapse сервера с Nginx, PostgreSQL и Coturn на Ubuntu/Debian](https://github.com/Glebshir/easy-matrix-server)
+
+[Create a Chat Server Using Matrix Synapse and Element](https://docs.vultr.com/create-a-chat-server-using-matrix-synapse-and-element-on-debian-11)
+
+[How to Install and Run Matrix Synapse Chat Server on Debian VPS](https://blog.radwebhosting.com/how-to-install-and-run-matrix-synapse-chat-server-on-debian-vps/)
+
+[Using Postgres](https://matrix-org.github.io/synapse/latest/postgres.html#using-postgres)
+
+[Synapse](https://wiki.calculate-linux.org/ru/synapse)
