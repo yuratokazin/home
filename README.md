@@ -1,6 +1,7 @@
 # home
 
 
+Пример копирования файла в локальной сети
 
 ```
 scp ~/homlab-blog/themes/grafana-style/layouts/index.html user@192.168.1.110:~/homlab-blog/themes/grafana-style/layouts/
