@@ -1,4 +1,14 @@
 # home
+
+
+
+```
+oem@lenovo:~$ scp ~/homlab-blog/themes/grafana-style/layouts/index.html user@192.168.1.110:~/homlab-blog/themes/grafana-style/layouts/
+user@192.168.1.110's password: 
+index.html                                                                           100%   17KB   2.2MB/s   00:00    
+oem@lenovo:~$ 
+```
+
  
 ## Установка и настройка сервера Matrix Synapse
 
